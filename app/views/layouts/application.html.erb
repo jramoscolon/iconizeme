@@ -10,8 +10,29 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<header>
+		<nav class="navbar navbar-default">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="/">IconizeMe!</a>
+			</div>
+			<div class="container">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="/">Home</a></li>
+					<li><a href="/static_pages/about">About</a></li>
+					<li><a href="/artists">Samples</a></li>
+					<li><a href="/icons">User Gallery</a></li>
+					<li><a href="/static_pages/order">Order</a></li>
+					<li><a href="/static_pages/contact">Contact</a></li>
+				</ul>
+			</div><!-- container -->
+		</nav>
+	</header>
 
 <%= yield %>
+
+	<footer>
+		<h6>Jose Ramos</h6>
+	</footer
 
 </body>
 </html>

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :icons
+  resources :artists
   get 'static_pages/about'
 
   get 'static_pages/order'

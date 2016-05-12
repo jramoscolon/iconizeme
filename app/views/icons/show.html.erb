@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+	<p>
+	  <strong>Artist name:</strong>
+	  <%= @icon.artist_name %>
+	</p>
+
+	<div class="img-responsive">
+      <%= image_tag(@icon.image_url, class: "img-thumbnail") %>
+    </div>
+
+	<%= link_to 'Edit', edit_icon_path(@icon) %> |
+	<%= link_to 'Back', icons_path %>
+
+</div><!-- container -->

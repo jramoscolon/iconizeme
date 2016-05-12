@@ -1,0 +1,88 @@
+<%= form_for(@artist) do |f| %>
+  <% if @artist.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@artist.errors.count, "error") %> prohibited this artist from being saved:</h2>
+
+      <ul>
+      <% @artist.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :first_name %><br>
+    <%= f.text_field :first_name %>
+  </div>
+    <div class="field">
+    <%= f.label :last_name %><br>
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :avatar_url %><br>
+    <%= f.text_field :avatar_url %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br>
+    <%= f.text_field :price %>
+  </div>
+
+  <!-- Samples section -->
+  <div class="field">
+    <%= f.label :sample_1 %><br>
+    <%= f.text_field :sample_1 %>
+  </div>
+  <div class="field">
+    <%= f.label :sample_2 %><br>
+    <%= f.text_field :sample_2 %>
+  </div>
+  <div class="field">
+    <%= f.label :sample_3 %><br>
+    <%= f.text_field :sample_3 %>
+  </div>
+  <div class="field">
+    <%= f.label :sample_4 %><br>
+    <%= f.text_field :sample_4 %>
+  </div>
+  <div class="field">
+    <%= f.label :sample_5 %><br>
+    <%= f.text_field :sample_5 %>
+  </div>
+  <div class="field">
+    <%= f.label :sample_6 %><br>
+    <%= f.text_field :sample_6 %>
+  </div>
+  <div class="field">
+    <%= f.label :sample_7 %><br>
+    <%= f.text_field :sample_7 %>
+  </div>
+  <div class="field">
+    <%= f.label :sample_8 %><br>
+    <%= f.text_field :sample_8 %>
+  </div>
+  <div class="field">
+    <%= f.label :sample_9 %><br>
+    <%= f.text_field :sample_9 %>
+  </div>
+  <!-- End of samples section -->
+  <div class="field">
+    <%= f.label :twitter_url %><br>
+    <%= f.text_field :twitter_url %>
+  </div>
+  <div class="field">
+    <%= f.label :facebook_url %><br>
+    <%= f.text_field :facebook_url %>
+  </div>
+  <div class="field">
+    <%= f.label :behance_url %><br>
+    <%= f.text_field :behance_url %>
+  </div>
+  <div class="field">
+    <%= f.label :linkedin_url %><br>
+    <%= f.text_field :linkedin_url %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

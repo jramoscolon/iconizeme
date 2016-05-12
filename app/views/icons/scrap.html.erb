@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+  <h1>Gallery: Icons</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Artist name</th>
+        <th>Image url</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @icons.each do |icon| %>
+        <tr>
+          <td><%= icon.artist_name %></td>
+          <td><%= icon.image_url %></td>
+          <td><%= link_to 'Show', icon %></td>
+          <td><%= link_to 'Edit', edit_icon_path(icon) %></td>
+          <td><%= link_to 'Destroy', icon, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to 'New Icon', new_icon_path %>
+</div><!-- container -->
+
+
